@@ -2,7 +2,5 @@
 
 Online teaching demonstration of how to plot individual event-related potential waveforms.
 
-Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/amandamcgow/plottingERP/PlottingERP.ipynb)
 
-RStudio: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/amandamcgow/plottingERP/HEAD)
-
+RStudio: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/amandamcgow/plottingERP/HEAD?labpath=PlottingERP.ipynb)
