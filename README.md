@@ -1,4 +1,4 @@
-# Specifying an R environment with a runtime.txt file
+# Launch the Jupyter Notebook file.
 
 Online teaching demonstration of how to plot individual event-related potential waveforms.
 
