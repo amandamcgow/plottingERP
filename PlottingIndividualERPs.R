@@ -2,17 +2,12 @@ library(ggplot2)
 
 
 # Step 1: Load in database
-ERPWaveform <- read.table("/Volumes/Seagate Backup Plus Drive/HBCLAB/Studies/FiRe/Analysis/Day2_ERP_Quantification_Waveform.dat", header = TRUE)
-ERPWaveform$GroupID <- ifelse(ERPWaveform$Group=="HigherFit", "High Cardiovascular Health", "Low Cardiovascular Health")
+ERPWaveform <- read.csv("ERPDatabase.csv")
 
-# Step 2: Subset electrodes of interest
-working <- ERPWaveform[which(ERPWaveform$Channel == "CZ"),]
-
-
-# Step 3: Plot each individual's data by Group
+# Step 2: Plot each individual's data by Group
 library(ggplot2)
 
-ggplot(data=working, aes(x=Time, y=Amplitude, group=factor(PartID))) +
+ggplot(data=ERPWaveform, aes(x=Time, y=Amplitude, group=factor(PartID))) +
   ggtitle("P3 amplitude by Group") +
   geom_smooth(method=loess, se=FALSE, fullrange=FALSE, lty=1, size=.5,  colour="gray40") +
   #geom_smooth(aes(group=1), method=loess, se=FALSE, fullrange=FALSE, lty=1, size=2, color="blue") +
